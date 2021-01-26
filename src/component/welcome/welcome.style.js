@@ -1,1 +1,5 @@
-import Styled from "stiled-components";
+import Styled from "styled-components";
+
+export const StyleWelcome = Styled.div`
+  color: red;
+`;
