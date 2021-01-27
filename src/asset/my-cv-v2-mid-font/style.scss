@@ -1,0 +1,164 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?i7loq0') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?i7loq0') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?i7loq0##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon__"], [class*=" icon__"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon__arrow-down {
+  &:before {
+    content: $icon__arrow-down; 
+  }
+}
+.icon__arrow-up {
+  &:before {
+    content: $icon__arrow-up; 
+  }
+}
+.icon__book {
+  &:before {
+    content: $icon__book; 
+  }
+}
+.icon__codetap {
+  &:before {
+    content: $icon__codetap; 
+  }
+}
+.icon__codewars {
+  &:before {
+    content: $icon__codewars; 
+  }
+}
+.icon__commits {
+  &:before {
+    content: $icon__commits; 
+  }
+}
+.icon__cross {
+  &:before {
+    content: $icon__cross; 
+  }
+}
+.icon__download {
+  &:before {
+    content: $icon__download; 
+  }
+}
+.icon__earth {
+  &:before {
+    content: $icon__earth; 
+  }
+}
+.icon__facebook {
+  &:before {
+    content: $icon__facebook; 
+  }
+}
+.icon__forks {
+  &:before {
+    content: $icon__forks; 
+  }
+}
+.icon__github {
+  &:before {
+    content: $icon__github; 
+  }
+}
+.icon__heart {
+  &:before {
+    content: $icon__heart; 
+  }
+}
+.icon__info {
+  &:before {
+    content: $icon__info; 
+  }
+}
+.icon__instagram {
+  &:before {
+    content: $icon__instagram; 
+  }
+}
+.icon__link {
+  &:before {
+    content: $icon__link; 
+  }
+}
+.icon__linkedin {
+  &:before {
+    content: $icon__linkedin; 
+  }
+}
+.icon__menu {
+  &:before {
+    content: $icon__menu; 
+  }
+}
+.icon__rotate {
+  &:before {
+    content: $icon__rotate; 
+  }
+}
+.icon__skype {
+  &:before {
+    content: $icon__skype; 
+  }
+}
+.icon__stackoverflow {
+  &:before {
+    content: $icon__stackoverflow; 
+  }
+}
+.icon__stars {
+  &:before {
+    content: $icon__stars; 
+  }
+}
+.icon__trophy {
+  &:before {
+    content: $icon__trophy; 
+  }
+}
+.icon__twitter {
+  &:before {
+    content: $icon__twitter; 
+  }
+}
+.icon__udemy {
+  &:before {
+    content: $icon__udemy; 
+  }
+}
+.icon__user {
+  &:before {
+    content: $icon__user; 
+  }
+}
+.icon__youtube {
+  &:before {
+    content: $icon__youtube; 
+  }
+}
+

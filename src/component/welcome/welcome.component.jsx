@@ -1,25 +1,31 @@
 import { React, useEffect, useState } from "react";
 import * as WS from "./welcome.style";
+import { youtubeConfig } from "../iconmoon/config";
+
+const url = "http://localhost:5000/welcome";
 
 const Welcome = () => {
   const [data, getData] = useState("Loading...");
-  useEffect (
-    () => {
-      fetch("http://localhost:5000/welcome").then(
-        result => result.json()
-
-      ).then(result => getData(result))
-    },
-    []
-  )
+  useEffect(() => {
+    fetch(url)
+      .then((result) => result.json())
+      .then((result) => getData(result));
+  }, []);
 
   return (
-    <WS.StyleWelcome>
-      {data.name}
-
-      <p>test1</p>
-      <p>test2</p>
-    </WS.StyleWelcome>
+    <div>
+      <WS.StyleGrid>
+        <WS.StyleRow>
+          <WS.StyleTitle>{data.sectionTitle}</WS.StyleTitle>
+        </WS.StyleRow>
+        <WS.UnderTitle>
+          <WS.StyleRow>{data.name}</WS.StyleRow>
+          <WS.StyleRow>{data.profession}</WS.StyleRow>
+          <WS.StyleRow>{data.welcomeInfo}</WS.StyleRow>
+          <a href="http://www.google.com"><WS.StyleIcon{ ...youtubeConfig}/></a>
+        </WS.UnderTitle>
+      </WS.StyleGrid>
+    </div>
   );
 };
 
