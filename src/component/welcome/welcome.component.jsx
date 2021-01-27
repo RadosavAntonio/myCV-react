@@ -16,14 +16,32 @@ const Welcome = () => {
     <div>
       <WS.StyleGrid>
         <WS.StyleRow>
-          <WS.StyleTitle>{data.sectionTitle}</WS.StyleTitle>
+          <WS.StyleTitlte>
+            <WS.StyleSectionTitle>{data.sectionTitle}</WS.StyleSectionTitle>
+          </WS.StyleTitlte>
         </WS.StyleRow>
-        <WS.UnderTitle>
-          <WS.StyleRow>{data.name}</WS.StyleRow>
-          <WS.StyleRow>{data.profession}</WS.StyleRow>
-          <WS.StyleRow>{data.welcomeInfo}</WS.StyleRow>
-          <a href="http://www.google.com"><WS.StyleIcon{ ...youtubeConfig}/></a>
-        </WS.UnderTitle>
+
+        
+        <WS.StyleIconWrapper>
+          <WS.StyleIcon { ...youtubeConfig }/>
+        </WS.StyleIconWrapper>
+        
+
+        <WS.StyleRow>
+          <WS.StyleMainTitle>{data.name}</WS.StyleMainTitle>
+        </WS.StyleRow>
+
+        <WS.StyleRow>
+          <WS.StyleProfession>{data.profession}</WS.StyleProfession>
+        </WS.StyleRow>
+
+        <WS.StyleRow>
+          <WS.StyleSemiTitle>{data.welcomeInfo}</WS.StyleSemiTitle>
+        </WS.StyleRow>
+
+        <WS.StyleRow>
+          <WS.StyleBox>{data.aboutMeBoxTextList}</WS.StyleBox>
+        </WS.StyleRow>
       </WS.StyleGrid>
     </div>
   );
