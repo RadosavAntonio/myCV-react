@@ -1,12 +1,26 @@
 import Styled from "styled-components";
 import { Icon } from "../iconmoon";
+import image from "../../asset/images/AntonioR.jpeg"
 
 
 export const StyleIcon = Styled(Icon)`
-  background-color: #d52027;
+  background-color: ${(props)=>(props.backgroundColor ? props.backgroundColor : "#d52027")};
   border-radius: 50%;
   padding: 10px;
   place-self: center;
+`;
+
+export const StyleBtnDownload = Styled.div`
+  background-color: #777666;
+  border-radius: 15px;
+  padding: 10px;
+  place-self: center;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+
 `;
 
 export const StyleIconWrapper = Styled.div`
@@ -19,9 +33,8 @@ export const StyleMainTitle = Styled.h1`
   font-weight: 600;
   color: #707070;
   text-align: center;
-  font-size: 48px;
-  line-height: 64px;
-  margin-top: 30px;
+  font-size: 45px;
+  line-height: 50px;
 `;
 
 export const StyleGrid = Styled.div`
@@ -95,4 +108,15 @@ export const StyleBox = Styled.div`
   font-weight: 600;
   line-height: 30px;
   color: #707070;
+`;
+
+export const StylePic = Styled.div`
+  margin: auto;
+  background-image: url(${image});
+  height: 150px;
+  width: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
 `;

@@ -1,10 +1,11 @@
 import { React, useEffect, useState } from "react";
 import * as WS from "./welcome.style";
 import { youtubeConfig } from "../iconmoon/config";
+import { download } from "../iconmoon/config";
 
 const url = "http://localhost:5000/welcome";
 
-const Welcome = () => {
+const Welcome = (props) => {
   const [data, getData] = useState("Loading...");
   useEffect(() => {
     fetch(url)
@@ -21,11 +22,9 @@ const Welcome = () => {
           </WS.StyleTitlte>
         </WS.StyleRow>
 
-        
-        <WS.StyleIconWrapper>
-          <WS.StyleIcon { ...youtubeConfig }/>
-        </WS.StyleIconWrapper>
-        
+        <WS.StyleRow>
+          <WS.StylePic />
+        </WS.StyleRow>
 
         <WS.StyleRow>
           <WS.StyleMainTitle>{data.name}</WS.StyleMainTitle>
@@ -42,6 +41,17 @@ const Welcome = () => {
         <WS.StyleRow>
           <WS.StyleBox>{data.aboutMeBoxTextList}</WS.StyleBox>
         </WS.StyleRow>
+
+        <WS.StyleIconWrapper>
+          <WS.StyleIcon {...youtubeConfig} />
+        </WS.StyleIconWrapper>
+
+        <WS.StyleIconWrapper>
+          <WS.StyleBtnDownload>
+            <WS.StyleIcon {...download}/>
+            {data.btnDownloadText}
+          </WS.StyleBtnDownload>
+        </WS.StyleIconWrapper>
       </WS.StyleGrid>
     </div>
   );

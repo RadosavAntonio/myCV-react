@@ -1,26 +1,36 @@
 const config = {
-  icon:{
+  icon: {
     youtube: "youtube",
-    arrowDown: "arrow-down"
+    arrowDown: "arrow-down",
+    download: "download",
   },
   size: {
-    small:12,
-    medium:18,
-    large:40
+    small: 12,
+    medium: 18,
+    large: 40,
   },
   color: {
     white: "#fff",
-    red: "#d52027"
-  }
-}
+    red: "#d52027",
+    cacaniu: "#777666"
+  },
+};
 
 export const youtubeConfig = {
-  icon:config.icon.youtube,
-  size:config.size.large,
-  color:config.color.white
-}
+  icon: config.icon.youtube,
+  size: config.size.large,
+  color: config.color.white,
+};
+
 export const arrowDown = {
-  icon:config.icon.arrowDown,
-  size:config.size.large,
-  color:config.color.white
-}
+  icon: config.icon.arrowDown,
+  size: config.size.large,
+  color: config.color.white,
+};
+
+export const download = {
+  icon: config.icon.download,
+  size: config.size.large,
+  color: config.color.white,
+  backgroundColor: config.color.cacaniu,
+};
