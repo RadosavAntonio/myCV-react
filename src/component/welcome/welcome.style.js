@@ -11,7 +11,7 @@ export const StyleIcon = Styled(Icon)`
 `;
 
 export const StyleBtnDownload = Styled.div`
-  background-color: #777666;
+  background-color: ${(props)=>(props.backgroundColor ? props.backgroundColor : "#777666")};
   border-radius: 15px;
   padding: 10px;
   place-self: center;

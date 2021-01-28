@@ -12,7 +12,8 @@ const config = {
   color: {
     white: "#fff",
     red: "#d52027",
-    cacaniu: "#777666"
+    cacaniu: "#777666",
+    transparent: "transparent",
   },
 };
 
@@ -32,5 +33,5 @@ export const download = {
   icon: config.icon.download,
   size: config.size.large,
   color: config.color.white,
-  backgroundColor: config.color.cacaniu,
+  backgroundColor: config.color.transparent,
 };

@@ -7,11 +7,18 @@ const url = "http://localhost:5000/welcome";
 
 const Welcome = (props) => {
   const [data, getData] = useState("Loading...");
+  const [backgroundColor, setBackgroundColor] = useState(null);
   useEffect(() => {
     fetch(url)
       .then((result) => result.json())
       .then((result) => getData(result));
   }, []);
+
+  const randomColor = () => Math.floor(Math.random() * 255);
+
+  const handleClick = () => {
+    setBackgroundColor(`rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`);
+  };
 
   return (
     <div>
@@ -47,8 +54,11 @@ const Welcome = (props) => {
         </WS.StyleIconWrapper>
 
         <WS.StyleIconWrapper>
-          <WS.StyleBtnDownload>
-            <WS.StyleIcon {...download}/>
+          <WS.StyleBtnDownload
+            onClick={handleClick}
+            backgroundColor={backgroundColor}
+          >
+            <WS.StyleIcon {...download} />
             {data.btnDownloadText}
           </WS.StyleBtnDownload>
         </WS.StyleIconWrapper>
